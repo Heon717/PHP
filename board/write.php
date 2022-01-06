@@ -1,3 +1,6 @@
+<?php
+include('header.php');
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -8,13 +11,13 @@
 </head>
 <body>
     <h1>글쓰기</h1>
-    <form action="insert.php" method="post">
+    <form action="boardinsert.php" method="post">
         <p>
-            <label for="name">제목:</label>
-            <input type="text" name="name" id="name">
+            <label for="title">제목:</label>
+            <input type="text" name="title" id="title">
         </p>
         <p>
-            <label for="name">내용:</label>
+            <label for="content">내용:</label>
             <textarea  name="content" id="content"></textarea>
         </p>
         <input type="submit">

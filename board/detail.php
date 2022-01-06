@@ -1,8 +1,17 @@
 <?php 
-    include('read.php');
-    echo $_SERVER['QUERY_STRING'];
-    $name = $_GET['name'];
-    echo $name;
+    include('header.php');
+    include_once("pdo.php");
+
+    // echo $_SERVER['QUERY_STRING'];   // idx=i
+    $idx = explode("=", $_SERVER['QUERY_STRING']);
+
+    $sql = "SELECT * FROM board where idx = ? ";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$idx[1]]);                           // 쿼리 실행
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);   // 쿼리 결과 저장  
+    
+    $conn = null;
 ?>
 
 <!DOCTYPE html>
@@ -14,17 +23,20 @@
     <title>Detail</title>
 </head>
 <body>
+<button onClick="history.back();">뒤로가기</button>
 <h1>디테일 페이지</h1>
     <div>
+        <hr>
         <div>
-            <span width="70px">번호</span>
-            <span width="500px">글제목</span>
-            <span width="120px">글쓴이</span>
-            <span width="100px">작성일</span>
-            <span width="100px">조회수</span>
+            <span width="70px"><?=$result['idx']?></span>
+            <span width="500px"><?=$result['title']?></span>
+            <span width="120px"><?=$result['name']?></span>
+            <span width="100px"><?=$result['regdate']?></span>
+            <span width="100px"><?=$result['hit']?></span>
         </div>
+        <hr>
         <div>
-            글내용
+            <?=$result['content']?>
         </div>
     </div>
 </body>

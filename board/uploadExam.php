@@ -8,6 +8,9 @@
 </head>
 <body>
     <?php 
+    var_dump($_FILES);      // $_FILES 에 담긴 배열 정보 보기
+    exit;
+    
     ini_set("display_errors","1");
     $uploaddir = 'C:\BitNami\wampstack-8.1.1-0\apache2\htdocs\upload\file\\';
     $uploadfile = $uploaddir.basename($_FILES['userfile']['name']);
@@ -18,7 +21,8 @@
     } else {
         echo "파일 업로드공격의 가능성이 있습니다";
     }
-    print_r($_FILES);
+    echo '자세한 디버깅 정보입니다.';
+    echo "</pre>";
 ?>
 </body>
 </html>

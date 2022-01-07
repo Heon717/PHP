@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="1.php" enctype="multipart/form-data">
+    <form method="POST" action="uploadExam.php" enctype="multipart/form-data">
         <input type="hidden" value="30000" name="MAX_FILE_SIZE">
         <input type="file" name="userfile">
         <input type="submit" name="upload" value="업로드">

@@ -5,12 +5,14 @@
     // echo $_SERVER['QUERY_STRING'];   // idx=i
     $idx = explode("=", $_SERVER['QUERY_STRING']);
 
-    $sql = "SELECT * FROM board where idx = ? ";
+    $sql = "SELECT * FROM board where idx = :idx ";
 
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$idx[1]]);                           // 쿼리 실행
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);   // 쿼리 결과 저장  
-    
+    $stmt = $conn->prepare($sql);  
+    $stmt->bindParam(':idx',$idx[1]);
+    $stmt->execute();
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);   // 쿼리 결과 저장 (가져올때 사용);
+
     $conn = null;
 ?>
 

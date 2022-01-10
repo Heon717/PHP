@@ -8,8 +8,8 @@
 </head>
 <body>
     <?php 
-    var_dump($_FILES);      // $_FILES 에 담긴 배열 정보 보기
-    exit;
+    var_dump($_FILES,"1");      // $_FILES 에 담긴 배열 정보 보기
+    // exit;
     
     ini_set("display_errors","1");
     $uploaddir = 'C:\BitNami\wampstack-8.1.1-0\apache2\htdocs\upload\file\\';
@@ -23,6 +23,8 @@
     }
     echo '자세한 디버깅 정보입니다.';
     echo "</pre>";
-?>
+    echo $_FILES['userfile']['name'];
+    ?>
+    
 </body>
 </html>

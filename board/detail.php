@@ -39,18 +39,19 @@
         <hr>
         <div>
             <?=$result['content']?>
+
             <?php
-                if($result['FILE'] == '') {
-                    echo "업로드 된 파일이 없습니다.";
-                } else {
+                // if($result['FILE'] == '') {
+                //     echo "업로드 된 파일이 없습니다.";
+                // } else {
                     ?>
-            <img src="./upload/file/<?=$result['FILE']?>">
+            <!-- <img src="../smarteditor2-2.8.2.3/upload/<?=$result['FILE']?>"> -->
             <?php
-                }
+                // }
             ?>
         </div>
         <div>
-            파일 : <a href="./upload/file/<?php echo $result['FILE']?>" download><?php echo $result['FILE']?></a>
+            파일 : <a href="../smarteditor2-2.8.2.3/upload/<?php echo $result['FILE']?>" download><?php echo $result['FILE']?></a>
         </div>
     </div>
 </body>

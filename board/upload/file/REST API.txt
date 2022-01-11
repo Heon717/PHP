@@ -1,0 +1,61 @@
+1) API ( Application Programming interface )
+	- interface 란 
+	  > 어떠한 두가지의 관계에서 상호간 소통할때 필요한 매개체 
+		ex) 사용자가 인터넷 아이콘을 클릭하고 싶을때 마우스를 이용하여 클릭함  << 마우스 = interface
+   	- API란
+	  >   응용 프로그램에서 사용할 수 있도록, 운영 체제나 프로그래밍 언어가 제공하는 기능을
+                   제어할 수 있게 만든 인터페이스를 뜻한다.
+	       주로 파일 제어, 창 제어, 화상 처리, 문자 제어 등을 위한 인터페이스를 제공한다.
+ 	  
+              >  결론 :  내가 만든 프로그램(응용 프로그램) 에서 누군가가 만든 기능(운영 체제나 프로그래밍 언어)을 
+	               제어 할 수 있게 하는 매개체
+
+
+2) REST ( Representational State Transfer )
+	- HTTP 기반으로 필요한 자원에 접근하는 방식을 정해놓은 아키텍쳐(소프트웨어나 하드웨어의 설계구조,구성)
+	
+	- REST 의 속성
+		> 서버에 있는 모든 resource는 각 resource 당 클라이언트가 바로 접근 할 수있는 고유 URI가 존재한다.
+		   모든 요청은 클라이언트가 요청할 때마다 필요한 정보를 주기 때문에 서버에서는 세션 정보를 보관할 필요가 없다. 
+		   즉, 서비스에 자유도가 높아지고 유연한 아키텍쳐 적응이 가능하다.
+		   HTTP 메소드를 사용한다. 모든 resource는 일반적으로 
+		   HTTP 인터페이스인 GET,POST,PUT,DELETE 4개의 메소드로 접근 되어야 한다.
+		   서비스 내에 하나의 resource가 주변에 연관 된 리소스들과 연결되어 표현이 되어야 한다.
+
+	- REST 의  구성요소
+	    * 자원( Resource ) , 행위 ( Method ) , 표현 ( Representations ) 로 구성
+	
+		> Resource
+		     * REST 자원의 위치를 나타내는 URI 로 접근한다 .  
+			!!  URI 설게시 지켜야하는 규칙이 있다. 
+			   규칙1 )  URI 를 이루는 resource 들은 동사말고 명사로 이루어져 있어야 한다.
+				자원의 정보를 표현해야 하는 URI는 PUT, POST 등 행위보다 자원의 표현으로 구성되어야 한다.
+			   규칙2 )  URI 에서는 _ 보다 - 를 권장한다. ( 쉽게 읽고 해석하기 위해 )
+			   규칙3 )  URI 경로에는 소문자로 구성한다.
+			   규칙4 )  파일 확장자는 URI 에 포함하지 않는다. 
+				ex ) http://tistory.com/students/photo.jpg  ( X )
+
+		> Method
+		     * 자원에 접근할 때 어떤 행위로 요청한 것인지 HTTP 메소드가 알려준다 . 
+		        GET , POST , PUT , DELETE 를 사용하여 CRUD를 구현한다. 
+			- GET : 해당 리소스를 조회 , 해당 도큐먼ㅌ에 대한 자세한 정보를 가져옴
+			- POST : 해당 URI 를 요청하면 리소스를 생성
+			- PUT : 해당 리소스를 수정
+			- DELETE : 해당 리소스를 삭제
+
+3) REST API 
+	-  HTTP기반으로 필요한 리소스를 요청하는 아키텍처( SW 설계구조 ) 로 설계된 API 이다.
+	   ( Rest 기반의 규칙들을 지켜서 설계된 API )
+
+4) RESTful
+	- 일반적으로 REST라는 아키텍처를 구현하는 웹 서비스를 나타내기 위해 사용되는 용어
+		ex ) ' REST API ' 를 제공하는 웹 서비스를 ' RESTful ' 하다 라고 할수 있음
+	- REST 원리를 잘 따르는 시스템을 RESTful 이란 용어로 지칭 된다
+
+      > 목적
+	- 이해하기 쉽고 사용하기 쉬운 REST API 를 만드는 것
+	- RESTful 한 API 를 구현하는 근본적인 목적은 API 의 이해도 및 호환성은 높이는 것
+
+      > RESTful 하지 못한 경우
+	ex )  CRUD 기능을 모두 POST로만 처리하는 API
+	ex )  루트( route ) 에 resource , id 외의 정보가 들어가는 경우 ( /students/updateName )

@@ -16,12 +16,11 @@ include('header.php');
     <title>Write</title>
 </head>
 <body>
-    
     <h1>글쓰기</h1>
     <form id="frm"action="boardinsert.php" method="post" enctype="multipart/form-data">
-        <!-- <div>
+        <div>
             <input type="file" value="1" name="userfile">
-        </div> -->
+        </div>
         <p>
             <label for="title">제목:</label>
             <input type="text" name="title" id="title">
@@ -39,11 +38,10 @@ include('header.php');
             sSkinURI: "../smarteditor2-2.8.2.3/SmartEditor2Skin.html",
             fCreator: "createSEditor2"
         });
-        $('#save_btn').click(function() {
-            oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
-            oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
-            $("#frm").submit();
-        })
+        // $('#save_btn').click(function() {
+        //     oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
+        //     $("#frm").submit();
+        // })
         </script>
 </body>
 </html>

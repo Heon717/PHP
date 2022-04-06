@@ -1,0 +1,191 @@
+::-webkit-scrollbar{
+    width: 3px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    break-after: #ccc;
+}
+
+.chat {
+    margin: 0 auto;
+    width: 500px;
+    border-radius: 25px;
+    border-top: 0px;
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.3);
+    
+}
+
+.chat .title {
+    position: sticky;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: center;
+    border-bottom: 1px solid #006fe6;
+    border-radius: 25px 25px 0 0;
+}
+
+.chat .form{
+    padding: 20px 15px;
+    min-height: 640px;
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.chat .form .inbox{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.chat .form .user-inbox{
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+
+.chat .form .inbox .icon {
+    height: 40px;
+    width: 40px;
+    columns: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: #007bff;
+}
+
+i {
+    padding: 10px;
+}
+.chat .form .inbox .msg-header {
+    max-width: 70%;
+    /* background-color: antiquewhite; */
+    margin-left: 10px;
+}
+
+/*챗봇 채팅 부분*/
+.chat .form .bot-inbox .msg-header #msg {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 10px;
+    padding: 10px 10px 10px;
+    font-size: 14px;
+    word-break:break-all;
+}
+
+.chat .form .bot-inbox .msg-header #msg button {
+    background-color: white;
+    border-color: #fff;
+    width: 70%;
+    margin: 10px 10px 10px 45px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.msg-header-btn {
+    background-color: white;
+    border-color: white;
+    width: 29%;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    border-radius: 15px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.msg-header-btn:focus {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+/*유저 채팅 부분*/
+.form .user-inbox .msg-header #msg {
+    color: #333;
+    background-color: #efefef;
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+
+.chat .typing-field{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #efefef;
+    border-top: 1px solid #d9d9d9;
+    border-radius: 0 0 25px 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    bottom: 0px;
+}
+
+.chat .typing-field .input-data {
+    height: 40px;
+    width: 460px;
+}
+
+.chat .typing-field .input-data input{
+    position: relative;
+    /* right: 10px; */
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.chat .typing-field .input-data #send-btn {
+    margin-left: 95px;
+}
+
+.typing-field .input-data input:focus {
+    border-color: rgba(0, 123, 255, 0.8);
+}
+
+.input-data input::placeholder {
+    transition: all 0.3s ease;
+    color: #999999;
+}
+
+.input-data input:focus::placeholder {
+    color: #bfbfbf;
+}
+
+.chat .typing-field .input-data button{
+    position: relative;
+    left: 315px;
+    bottom:20px;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.chat .typing-field .input-data button:hover{
+    background-color: #006fef;
+}

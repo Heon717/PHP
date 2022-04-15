@@ -1,0 +1,136 @@
+* {
+    /* text-decoration: none; */
+    list-style-type: none;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(221, 169, 169);
+}
+
+#inp {
+    border :1px solid rgb(229, 230, 232);
+    width: 98%;
+    height: 56px;
+    margin-bottom: 20px;
+}
+
+#inp_chk {
+    border :1px solid rgb(229, 230, 232);
+    width: 65%;
+    height: 56px;
+    margin-bottom: 20px;
+}
+
+input::placeholder{
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+#chk_btn{
+    margin-left: 10px;
+    width: 30%;
+    height: 56px;
+    background-color: #fff;
+    border: 1px solid #1CABE2;
+    cursor: pointer;
+    color: #1CABE2;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#chk_btn:hover {
+    border: 1px solid #fff;
+    background-color: #1CABE2;
+    color: #fff;
+}
+
+#joinBtn {
+    margin-top: 60px;
+    width: 100%;
+    height: 53px;
+    background-color: #1CABE2;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#joinBtn2 {
+    margin-top: 60px;
+    width: 100%;
+    height: 53px;
+    background-color: #fff;
+    color: #1CABE2;
+    border: 1px solid #1CABE2;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#joinBtn:hover {
+    background-color: #007aff;
+}
+
+#loginBtn {
+    margin-top: 60px;
+    width: 100%;
+    height: 53px;
+    background-color: #1CABE2;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#chk a{
+    position: absolute;
+    right: 10px;
+    color: rgb(130, 131, 133);
+}
+
+#req>p::before{
+    content:"·";
+    font-size: 30px;
+    color: #1CABE2;
+}
+
+#pwd_ment , #id_ment{
+    font-size: 12px;
+    margin-top: -20px;
+}
+
+#pwd_check_ment{
+    font-size: 12px;
+    margin-top: -20px;
+    margin-top: 50px;
+}
+
+#suggest {
+    font-size: 14px;
+    margin-bottom: -50px;
+}
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: beige;
+}
+
+
